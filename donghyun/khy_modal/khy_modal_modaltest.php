@@ -3,8 +3,6 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
-
 <style>
 body {font-family: Arial, Helvetica, sans-serif;}
 
@@ -78,7 +76,7 @@ tr, td{
 <h2>Modal Example</h2>
 
 <!-- Trigger/Open The Modal -->
-<button id="myBtn">Open Modal</button>
+<button id="myBtn2">Sign in!</button>&nbsp;&nbsp;&nbsp;<button id="myBtn">Join now</button>
 
 <!-- The Modal -->
 <div id="myModal" class="modal">
@@ -120,7 +118,7 @@ tr, td{
                 <input type="hidden" name="login_password" value="" placeholder="Password" id="password2" size="46">
                 <input type="hidden" id="login" value="Log in!" style="float : right">
               </form>
-              <input type="button" name="button" id="email_btn" value="Continue with E-mail">
+              <input type="button" name="button" id="email_btn" value="Continue with E-mail" onclick="memform()">
               <br><br>
               <span id="by_span">By creating an account, you agree to our terms and privacy policy.<span>
             </td>
@@ -162,6 +160,7 @@ var modal = document.getElementById("myModal");
 
 // Get the button that opens the modal
 var btn = document.getElementById("myBtn");
+var btn2 = document.getElementById("myBtn2");
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
@@ -169,10 +168,17 @@ var span = document.getElementsByClassName("close")[0];
 // When the user clicks the button, open the modal
 btn.onclick = function() {
   modal.style.display = "block";
+  flag = false;
+  sign_man();
 }
 
+btn2.onclick = function(){
+  modal.style.display = "block";
+  flag = true;
+  sign_man();
+}
 
-mem_btn.onclick = function(){
+function memform(){
   first_name.setAttribute("type","text");
   last_name.setAttribute("type","text");
   email_address.setAttribute("type","text");
