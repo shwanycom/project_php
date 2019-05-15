@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
 body {font-family: Arial, Helvetica, sans-serif;}
@@ -27,8 +26,8 @@ body {font-family: Arial, Helvetica, sans-serif;}
   margin: auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 50%;
-  height : 70%;
+  width: 700px;
+  height : 500px;
 }
 
 /* The Close Button */
